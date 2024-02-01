@@ -15,8 +15,11 @@ hilt = "2.50"
 datastore = "1.0.0"
 lifecycle="2.7.0"
 hilt-androidx = "1.1.0"
+navigation = "2.7.6"
+material = "1.6.0"
 
 [libraries]
+androidx-navigation = {group = "androidx.navigation",name="navigation-compose",version.ref = "navigation"}
 datastore-preferences = {group = "androidx.datastore",name="datastore-preferences",version.ref = "datastore"}
 hilt-android = {group = "com.google.dagger",name="hilt-android",version.ref = "hilt"}
 hilt-android-compiler = {group = "com.google.dagger",name="hilt-android-compiler",version.ref = "hilt"}
@@ -34,6 +37,7 @@ lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtim
 lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "lifecycle" }
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+compose-material = { group = "androidx.compose.material", name = "material", version.ref = "material" }
 ui = { group = "androidx.compose.ui", name = "ui" }
 ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }

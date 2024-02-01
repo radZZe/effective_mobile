@@ -10,6 +10,7 @@ import ru.radzze.effective_mobile.ui.topAppBar
 fun MainScreen(){
     Column(modifier=Modifier.fillMaxSize()) {
         topAppBar(title = "Главная")
-        
+
     }
 }
+

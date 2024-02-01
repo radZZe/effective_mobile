@@ -54,6 +54,9 @@ android {
 }
 
 dependencies {
+    implementation(libs.compose.material)
+    implementation(libs.androidx.navigation)
+
     implementation(libs.datastore.preferences)
 
     implementation(libs.hilt.android)

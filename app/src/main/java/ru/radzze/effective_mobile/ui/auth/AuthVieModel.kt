@@ -2,11 +2,18 @@ package ru.radzze.effective_mobile.ui.auth
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
+import ru.radzze.effective_mobile.data.UserStore
+import ru.radzze.effective_mobile.data.UserStore.PreferenceKeys
 import javax.inject.Inject
 
 @HiltViewModel
 class AuthVieModel @Inject constructor(
+    private val userStore:UserStore
 ) : ViewModel() {
     val name = mutableStateOf("")
     val surname = mutableStateOf("")
@@ -34,8 +41,14 @@ class AuthVieModel @Inject constructor(
         }
     }
 
-    fun onBtnCluck() {
-        TODO()
+    fun onBtnClick() {
+        viewModelScope.launch(Dispatchers.IO) {
+            userStore.setPref(prefValue = name.value, prefKey = UserStore.name)
+            userStore.setPref(prefValue = surname.value, prefKey = UserStore.surname)
+            userStore.setPref(prefValue = phone.value, prefKey = UserStore.phone)
+            userStore.setPref(true,UserStore.isAuthenticated)
+        }
+
     }
 
     fun validateCyrillic(text: String): Boolean {
