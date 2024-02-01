@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "ru.radzze.effective_mobile"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "ru.radzze.effective_mobile"
@@ -43,7 +43,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.5.2"
     }
     packaging {
         resources {
@@ -57,6 +57,8 @@ dependencies {
     implementation(libs.datastore.preferences)
 
     implementation(libs.hilt.android)
+//    implementation(libs.hilt.lifecycle.viewmodel)
+    implementation(libs.hilt.navigation.compose)
     kapt(libs.hilt.android.compiler)
 
     implementation(libs.retrofit)
@@ -66,6 +68,8 @@ dependencies {
     kapt(libs.room.compiler)
 
     implementation(libs.coroutines)
+
+    implementation(libs.lifecycle.viewmodel)
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)

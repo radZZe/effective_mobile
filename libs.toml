@@ -1,5 +1,5 @@
 [versions]
-kotlin = "1.8.10"
+kotlin = "1.9.0"
 agp = "8.1.1"
 coroutines = "1.7.3"
 core-ktx = "1.12.0"
@@ -13,11 +13,15 @@ retrofit = "2.9.0"
 room = "2.6.1"
 hilt = "2.50"
 datastore = "1.0.0"
+lifecycle="2.7.0"
+hilt-androidx = "1.1.0"
 
 [libraries]
 datastore-preferences = {group = "androidx.datastore",name="datastore-preferences",version.ref = "datastore"}
 hilt-android = {group = "com.google.dagger",name="hilt-android",version.ref = "hilt"}
 hilt-android-compiler = {group = "com.google.dagger",name="hilt-android-compiler",version.ref = "hilt"}
+hilt-lifecycle-viewmodel = {group = "androidx.hilt",name="hilt-lifecycle-viewmodel",version.ref = "hilt"}
+hilt-navigation-compose = {group = "androidx.hilt",name="hilt-navigation-compose",version.ref = "hilt-androidx"}
 room-runtime = {group = "androidx.room",name = "room-runtime",version.ref = "room"}
 room-compiler = {group = "androidx.room",name = "room-compiler",version.ref = "room"}
 retrofit = {group = "com.squareup.retrofit2",name = "retrofit",version.ref = "retrofit"}
@@ -27,6 +31,7 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
 lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
+lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "lifecycle" }
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
 ui = { group = "androidx.compose.ui", name = "ui" }
